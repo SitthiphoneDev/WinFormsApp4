@@ -96,7 +96,7 @@
             button2.Name = "button2";
             button2.Size = new Size(152, 38);
             button2.TabIndex = 5;
-            button2.Text = "button2";
+            button2.Text = "convert to Gray";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -106,7 +106,7 @@
             button3.Name = "button3";
             button3.Size = new Size(157, 29);
             button3.TabIndex = 6;
-            button3.Text = "button3";
+            button3.Text = "set and get Pixel";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 

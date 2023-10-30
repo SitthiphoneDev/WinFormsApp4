@@ -1,4 +1,4 @@
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace WinFormsApp4
@@ -61,8 +61,24 @@ namespace WinFormsApp4
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // สร้าง object Bitmap จาก PictureBox1
+            Bitmap srcBitmap = new Bitmap(pictureBox1.Image);
 
+            // สร้าง object Bitmap ขนาด 100x50
+            Bitmap dstBitmap = new Bitmap(100, 50);
+
+            for (int x = 120; x < 220; x++)
+            {
+                for (int y = 80; y < 130; y++)
+                {
+                    dstBitmap.SetPixel(x - 120, y - 80, srcBitmap.GetPixel(x, y));
+                }
+            }
+
+            // แสดง Bitmap ที่แก้ไขใน PictureBox2
+            pictureBox2.Image = dstBitmap;
         }
+
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
