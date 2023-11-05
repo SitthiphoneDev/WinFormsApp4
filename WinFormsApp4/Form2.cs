@@ -33,6 +33,7 @@ namespace WinFormsApp4
             }
         }
 
+        //Gray scale 1
         public Bitmap ConvertToGray(Bitmap source)
         {
             Bitmap bmp = new Bitmap(source.Width, source.Height);
@@ -59,8 +60,57 @@ namespace WinFormsApp4
             pictureBox1.Image = pict_O;
         }
 
+        //Glay Scale 2
+        public Bitmap ConvertToGray2(Bitmap source)
+        {
+            Bitmap bmp = new Bitmap(source.Width, source.Height);
+            for (int x = 0; x < bmp.Width; x++)
+            {
+                for (int y = 0; y < bmp.Height; y++)
+                {
+                    Color c = source.GetPixel(x, y);
+                    int avr = (int)((c.R + c.G + c.B) / 3);
+                    bmp.SetPixel(x, y, Color.FromArgb(avr, avr, avr));
+                }
+            }
+            return bmp;
+        }
+        private void btnglay2_Click(object sender, EventArgs e)
+        {
+            pict_C = ConvertToGray2(pict_O);
+            pictureBox1.Image = pict_C;
+        }
+
+        //Black and White
+
         public Bitmap ConvertToBlackAndWhite(Bitmap source, int thresholdValue)
         {
+            Bitmap bmp = new Bitmap(source.Width, source.Height);
+            for (int x = 0; x < bmp.Width; x++)
+            {
+                for (int y = 0; y < bmp.Height; y++)
+                {
+                    Color c = source.GetPixel(x, y);
+                    int avr = (int)((c.R * 0.3) + (c.G * 0.59) + (c.B * 0.11));
+
+                    if (avr >= thresholdValue)
+                    {
+                        bmp.SetPixel(x, y, Color.White);
+                    }
+                    else
+                    {
+                        bmp.SetPixel(x, y, Color.Black);
+                    }
+                }
+            }
+            return bmp;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int.TryParse(txtT.Text, out int thresholdValue);
+            pict_C = ConvertToBlackAndWhite(pict_O, thresholdValue);
+            pictureBox1.Image = pict_C;
 
         }
     }
