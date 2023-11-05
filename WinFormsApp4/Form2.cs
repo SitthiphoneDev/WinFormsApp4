@@ -59,7 +59,7 @@ namespace WinFormsApp4
             pictureBox1.Image = pict_O;
         }
 
-        private void btnbw_Click(object sender, EventArgs e)
+        public Bitmap ConvertToBlackAndWhite(Bitmap source, int thresholdValue)
         {
 
         }

@@ -35,7 +35,19 @@
             btnbw = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtT = new TextBox();
+            btnnsgative = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            textBox2 = new TextBox();
+            label2 = new Label();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            button4 = new Button();
+            textBox4 = new TextBox();
+            label4 = new Label();
+            button5 = new Button();
+            button6 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
