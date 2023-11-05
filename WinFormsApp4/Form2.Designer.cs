@@ -30,9 +30,7 @@
         {
             btnOrigin = new Button();
             btngray1 = new Button();
-            btngray2 = new Button();
             btnopen = new Button();
-            btnbw = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             txtT = new TextBox();
@@ -73,13 +71,6 @@
             btngray1.UseVisualStyleBackColor = true;
             btngray1.Click += btngray1_Click;
             // 
-            // btngray2
-            // 
-            btngray2.Location = new Point(0, 0);
-            btngray2.Name = "btngray2";
-            btngray2.Size = new Size(75, 23);
-            btngray2.TabIndex = 21;
-            // 
             // btnopen
             // 
             btnopen.Location = new Point(349, 16);
@@ -89,13 +80,6 @@
             btnopen.Text = "Open Image";
             btnopen.UseVisualStyleBackColor = true;
             btnopen.Click += btnopen_Click;
-            // 
-            // btnbw
-            // 
-            btnbw.Location = new Point(0, 0);
-            btnbw.Name = "btnbw";
-            btnbw.Size = new Size(75, 23);
-            btnbw.TabIndex = 20;
             // 
             // pictureBox1
             // 
@@ -123,7 +107,7 @@
             txtT.Name = "txtT";
             txtT.Size = new Size(93, 29);
             txtT.TabIndex = 7;
-            txtT.Text = "150";
+            txtT.Text = "128";
             // 
             // btnnsgative
             // 
@@ -133,6 +117,7 @@
             btnnsgative.TabIndex = 8;
             btnnsgative.Text = "Nagative";
             btnnsgative.UseVisualStyleBackColor = true;
+            btnnsgative.Click += btnnsgative_Click;
             // 
             // button2
             // 
@@ -142,6 +127,7 @@
             button2.TabIndex = 9;
             button2.Text = "Invert";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -275,9 +261,7 @@
             Controls.Add(txtT);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Controls.Add(btnbw);
             Controls.Add(btnopen);
-            Controls.Add(btngray2);
             Controls.Add(btngray1);
             Controls.Add(btnOrigin);
             Name = "Form2";
@@ -291,9 +275,7 @@
 
         private Button btnOrigin;
         private Button btngray1;
-        private Button btngray2;
         private Button btnopen;
-        private Button btnbw;
         private PictureBox pictureBox1;
         private Label label1;
         private TextBox txtT;

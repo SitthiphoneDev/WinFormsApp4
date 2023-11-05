@@ -69,7 +69,7 @@ namespace WinFormsApp4
                 for (int y = 0; y < bmp.Height; y++)
                 {
                     Color c = source.GetPixel(x, y);
-                    int avr = (int)((c.R + c.G + c.B) / 3);
+                    int avr = (int)((0.3 * c.R + 0.59 * c.G + 0.11 * c.B));
                     bmp.SetPixel(x, y, Color.FromArgb(avr, avr, avr));
                 }
             }
@@ -112,6 +112,66 @@ namespace WinFormsApp4
             pict_C = ConvertToBlackAndWhite(pict_O, thresholdValue);
             pictureBox1.Image = pict_C;
 
+        }
+
+        // Nagative
+        public Bitmap Negative(Bitmap source)
+        {
+            Bitmap negativeImage = new Bitmap(source.Width, source.Height);
+
+            for (int x = 0; x < source.Width; x++)
+            {
+                for (int y = 0; y < source.Height; y++)
+                {
+                    Color originalColor = source.GetPixel(x, y);
+
+                    int newRed = 255 - originalColor.R;
+                    int newGreen = 255 - originalColor.G;
+                    int newBlue = 255 - originalColor.B;
+
+                    Color newColor = Color.FromArgb(newRed, newGreen, newBlue);
+
+                    negativeImage.SetPixel(x, y, newColor);
+                }
+            }
+
+            return negativeImage;
+        }
+
+        private void btnnsgative_Click(object sender, EventArgs e)
+        {
+            pict_C = Negative(pict_O);
+            pictureBox1.Image = pict_C;
+        }
+
+        //invert
+        public Bitmap Invert(Bitmap source)
+        {
+            Bitmap invertedImage = new Bitmap(source.Width, source.Height);
+
+            for (int x = 0; x < source.Width; x++)
+            {
+                for (int y = 0; y < source.Height; y++)
+                {
+                    Color originalColor = source.GetPixel(x, y);
+
+                    int newRed = 255 - originalColor.R;
+                    int newGreen = 255 - originalColor.G;
+                    int newBlue = 255 - originalColor.B;
+
+                    Color newColor = Color.FromArgb(newRed, newGreen, newBlue);
+
+                    invertedImage.SetPixel(x, y, newColor);
+                }
+            }
+
+            return invertedImage;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pict_C = Invert(pict_O);
+            pictureBox1.Image = pict_C;
         }
     }
 }
