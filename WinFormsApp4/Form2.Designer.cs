@@ -37,12 +37,12 @@
             btnnsgative = new Button();
             button2 = new Button();
             button3 = new Button();
-            textBox2 = new TextBox();
+            txtc = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtc2 = new TextBox();
             label3 = new Label();
             button4 = new Button();
-            textBox4 = new TextBox();
+            txtgm = new TextBox();
             label4 = new Label();
             button5 = new Button();
             button6 = new Button();
@@ -137,15 +137,16 @@
             button3.TabIndex = 10;
             button3.Text = "Log Transformation";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
-            // textBox2
+            // txtc
             // 
-            textBox2.Location = new Point(582, 295);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(93, 29);
-            textBox2.TabIndex = 12;
-            textBox2.Text = "150";
+            txtc.Location = new Point(582, 295);
+            txtc.Multiline = true;
+            txtc.Name = "txtc";
+            txtc.Size = new Size(93, 29);
+            txtc.TabIndex = 12;
+            txtc.Text = "150";
             // 
             // label2
             // 
@@ -156,14 +157,14 @@
             label2.TabIndex = 11;
             label2.Text = "C : ";
             // 
-            // textBox3
+            // txtc2
             // 
-            textBox3.Location = new Point(582, 370);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(93, 29);
-            textBox3.TabIndex = 14;
-            textBox3.Text = "150";
+            txtc2.Location = new Point(582, 370);
+            txtc2.Multiline = true;
+            txtc2.Name = "txtc2";
+            txtc2.Size = new Size(93, 29);
+            txtc2.TabIndex = 14;
+            txtc2.Text = "150";
             // 
             // label3
             // 
@@ -182,24 +183,25 @@
             button4.TabIndex = 15;
             button4.Text = "Power Low";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
-            // textBox4
+            // txtgm
             // 
-            textBox4.Location = new Point(582, 405);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(93, 29);
-            textBox4.TabIndex = 17;
-            textBox4.Text = "150";
+            txtgm.Location = new Point(582, 405);
+            txtgm.Multiline = true;
+            txtgm.Name = "txtgm";
+            txtgm.Size = new Size(93, 29);
+            txtgm.TabIndex = 17;
+            txtgm.Text = "150";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(491, 408);
             label4.Name = "label4";
-            label4.Size = new Size(55, 20);
+            label4.Size = new Size(68, 20);
             label4.TabIndex = 16;
-            label4.Text = "Alpha: ";
+            label4.Text = "Gamma: ";
             // 
             // button5
             // 
@@ -248,12 +250,12 @@
             Controls.Add(btnglay2);
             Controls.Add(button6);
             Controls.Add(button5);
-            Controls.Add(textBox4);
+            Controls.Add(txtgm);
             Controls.Add(label4);
             Controls.Add(button4);
-            Controls.Add(textBox3);
+            Controls.Add(txtc2);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txtc);
             Controls.Add(label2);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -282,12 +284,12 @@
         private Button btnnsgative;
         private Button button2;
         private Button button3;
-        private TextBox textBox2;
+        private TextBox txtc;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtc2;
         private Label label3;
         private Button button4;
-        private TextBox textBox4;
+        private TextBox txtgm;
         private Label label4;
         private Button button5;
         private Button button6;

@@ -95,10 +95,12 @@ namespace WinFormsApp4
 
                     if (avr >= thresholdValue)
                     {
+                        avr = 255;
                         bmp.SetPixel(x, y, Color.White);
                     }
                     else
                     {
+                        avr = 0;
                         bmp.SetPixel(x, y, Color.Black);
                     }
                 }
@@ -144,10 +146,50 @@ namespace WinFormsApp4
             pictureBox1.Image = pict_C;
         }
 
-        //invert
-        public Bitmap Invert(Bitmap source)
+
+
+
+
+
+        //Invert
+
+        public Bitmap Invert(Bitmap source, int thresholdValue)
         {
-            Bitmap invertedImage = new Bitmap(source.Width, source.Height);
+            Bitmap bmp = new Bitmap(source.Width, source.Height);
+            for (int x = 0; x < bmp.Width; x++)
+            {
+                for (int y = 0; y < bmp.Height; y++)
+                {
+                    Color c = source.GetPixel(x, y);
+                    int avr = (int)((c.R * 0.3) + (c.G * 0.59) + (c.B * 0.11));
+
+                    if (avr < thresholdValue)
+                    {
+                        avr = 0;
+                        bmp.SetPixel(x, y, Color.White);
+                    }
+                    else
+                    {
+
+                        avr = 255;
+                        bmp.SetPixel(x, y, Color.Black);
+                    }
+                }
+            }
+            return bmp;
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int.TryParse(txtT.Text, out int thresholdValue);
+            pict_C = Invert(pict_O, thresholdValue);
+            pictureBox1.Image = pict_C;
+        }
+
+
+        // Log Transformation
+        public Bitmap LogTransformation(Bitmap source, double c)
+        {
+            Bitmap result = new Bitmap(source.Width, source.Height);
 
             for (int x = 0; x < source.Width; x++)
             {
@@ -155,23 +197,67 @@ namespace WinFormsApp4
                 {
                     Color originalColor = source.GetPixel(x, y);
 
-                    int newRed = 255 - originalColor.R;
-                    int newGreen = 255 - originalColor.G;
-                    int newBlue = 255 - originalColor.B;
+                    int r = (int)(c * Math.Log(1 + originalColor.R));
+                    int g = (int)(c * Math.Log(1 + originalColor.G));
+                    int b = (int)(c * Math.Log(1 + originalColor.B));
 
-                    Color newColor = Color.FromArgb(newRed, newGreen, newBlue);
+                    r = Math.Max(0, Math.Min(255, r)); // Ensure values are within the valid range
+                    g = Math.Max(0, Math.Min(255, g));
+                    b = Math.Max(0, Math.Min(255, b));
 
-                    invertedImage.SetPixel(x, y, newColor);
+                    Color newColor = Color.FromArgb(r, g, b);
+                    result.SetPixel(x, y, newColor);
                 }
             }
 
-            return invertedImage;
+            return result;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+
+
+        private void button3_Click(object sender, EventArgs e)
         {
-            pict_C = Invert(pict_O);
+            int.TryParse(txtc.Text, out int c);
+            pict_C = LogTransformation(pict_O, c);
+            pictureBox1.Image = pict_C;
+
+        }
+
+        // Power-Law Transformation
+        public Bitmap PowerLaw(Bitmap source, double c, double gamma)
+        {
+            Bitmap result = new Bitmap(source.Width, source.Height);
+
+            for (int x = 0; x < source.Width; x++)
+            {
+                for (int y = 0; y < source.Height; y++)
+                {
+                    Color originalColor = source.GetPixel(x, y);
+
+                    int r = (int)(c * Math.Pow(originalColor.R, gamma));
+                    int g = (int)(c * Math.Pow(originalColor.G, gamma));
+                    int b = (int)(c * Math.Pow(originalColor.B, gamma));
+
+                    r = Math.Max(0, Math.Min(255, r)); // Ensure values are within the valid range
+                    g = Math.Max(0, Math.Min(255, g));
+                    b = Math.Max(0, Math.Min(255, b));
+
+                    Color newColor = Color.FromArgb(r, g, b);
+                    result.SetPixel(x, y, newColor);
+                }
+            }
+
+            return result;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int.TryParse(txtc2.Text, out int c);
+            int.TryParse(txtgm.Text, out int gm);
+            pict_C = PowerLaw(pict_O, c, gm);
             pictureBox1.Image = pict_C;
         }
     }
 }
+
