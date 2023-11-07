@@ -17,6 +17,15 @@ namespace WinFormsApp4
             InitializeComponent();
         }
 
+        private bool IsPictureBoxEmpty()
+        {
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("ກະລຸນາເພີ່ມຮູບພາບກ່ອນ");
+                return true;
+            }
+            return false;
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -50,6 +59,10 @@ namespace WinFormsApp4
         }
         private void btngray1_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             pict_C = ConvertToGray(pict_O);
             pictureBox1.Image = pict_C;
 
@@ -57,6 +70,10 @@ namespace WinFormsApp4
 
         private void btnOrigin_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             pictureBox1.Image = pict_O;
         }
 
@@ -77,6 +94,10 @@ namespace WinFormsApp4
         }
         private void btnglay2_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             pict_C = ConvertToGray2(pict_O);
             pictureBox1.Image = pict_C;
         }
@@ -110,6 +131,10 @@ namespace WinFormsApp4
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             int.TryParse(txtT.Text, out int thresholdValue);
             pict_C = ConvertToBlackAndWhite(pict_O, thresholdValue);
             pictureBox1.Image = pict_C;
@@ -142,6 +167,10 @@ namespace WinFormsApp4
 
         private void btnnsgative_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             pict_C = Negative(pict_O);
             pictureBox1.Image = pict_C;
         }
@@ -180,6 +209,10 @@ namespace WinFormsApp4
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             int.TryParse(txtT.Text, out int thresholdValue);
             pict_C = Invert(pict_O, thresholdValue);
             pictureBox1.Image = pict_C;
@@ -218,6 +251,10 @@ namespace WinFormsApp4
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             int.TryParse(txtc.Text, out int c);
             pict_C = LogTransformation(pict_O, c);
             pictureBox1.Image = pict_C;
@@ -253,6 +290,10 @@ namespace WinFormsApp4
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (IsPictureBoxEmpty())
+            {
+                return;
+            }
             int.TryParse(txtc2.Text, out int c);
             int.TryParse(txtgm.Text, out int gm);
             pict_C = PowerLaw(pict_O, c, gm);

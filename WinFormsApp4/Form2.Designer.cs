@@ -164,7 +164,7 @@
             txtc2.Name = "txtc2";
             txtc2.Size = new Size(93, 29);
             txtc2.TabIndex = 14;
-            txtc2.Text = "150";
+            txtc2.Text = "1";
             // 
             // label3
             // 
@@ -192,7 +192,7 @@
             txtgm.Name = "txtgm";
             txtgm.Size = new Size(93, 29);
             txtgm.TabIndex = 17;
-            txtgm.Text = "150";
+            txtgm.Text = "2";
             // 
             // label4
             // 
