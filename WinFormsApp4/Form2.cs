@@ -34,6 +34,7 @@ namespace WinFormsApp4
         private void btnopen_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.tiff";
             if (opf.ShowDialog() == DialogResult.OK)
             {
                 pict_C = new Bitmap(opf.FileName);
@@ -41,6 +42,7 @@ namespace WinFormsApp4
                 pictureBox1.Image = pict_C;
             }
         }
+
 
         //Gray scale 1
         public Bitmap ConvertToGray(Bitmap source)
