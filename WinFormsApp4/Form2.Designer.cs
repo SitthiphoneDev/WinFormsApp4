@@ -73,12 +73,14 @@
             // 
             // btnopen
             // 
-            btnopen.Location = new Point(349, 16);
+            btnopen.BackColor = SystemColors.GradientActiveCaption;
+            btnopen.ForeColor = SystemColors.Highlight;
+            btnopen.Location = new Point(369, 16);
             btnopen.Name = "btnopen";
             btnopen.Size = new Size(116, 36);
             btnopen.TabIndex = 3;
             btnopen.Text = "Open Image";
-            btnopen.UseVisualStyleBackColor = true;
+            btnopen.UseVisualStyleBackColor = false;
             btnopen.Click += btnopen_Click;
             // 
             // pictureBox1
@@ -108,10 +110,11 @@
             txtT.Size = new Size(93, 29);
             txtT.TabIndex = 7;
             txtT.Text = "128";
+            txtT.TextChanged += txtT_TextChanged;
             // 
             // btnnsgative
             // 
-            btnnsgative.Location = new Point(491, 179);
+            btnnsgative.Location = new Point(491, 203);
             btnnsgative.Name = "btnnsgative";
             btnnsgative.Size = new Size(108, 32);
             btnnsgative.TabIndex = 8;
@@ -121,7 +124,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(491, 217);
+            button2.Location = new Point(491, 165);
             button2.Name = "button2";
             button2.Size = new Size(108, 32);
             button2.TabIndex = 9;
@@ -146,7 +149,7 @@
             txtc.Name = "txtc";
             txtc.Size = new Size(93, 29);
             txtc.TabIndex = 12;
-            txtc.Text = "150";
+            txtc.Text = "30";
             // 
             // label2
             // 

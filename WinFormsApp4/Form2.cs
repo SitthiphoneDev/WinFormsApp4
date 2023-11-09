@@ -138,9 +138,16 @@ namespace WinFormsApp4
                 return;
             }
             int.TryParse(txtT.Text, out int thresholdValue);
-            pict_C = ConvertToBlackAndWhite(pict_O, thresholdValue);
-            pictureBox1.Image = pict_C;
 
+            if (thresholdValue < 0 || thresholdValue > 255)
+            {
+                MessageBox.Show("ກະລຸນາລະບຸຄ່າ Thteshold ລະຫວ່າງ 0 - 255");
+            }
+            else
+            {
+                pict_C = ConvertToBlackAndWhite(pict_O, thresholdValue);
+                pictureBox1.Image = pict_C;
+            }
         }
 
         // Nagative
@@ -215,9 +222,18 @@ namespace WinFormsApp4
             {
                 return;
             }
+
             int.TryParse(txtT.Text, out int thresholdValue);
-            pict_C = Invert(pict_O, thresholdValue);
-            pictureBox1.Image = pict_C;
+
+            if (thresholdValue < 0 || thresholdValue > 255)
+            {
+                MessageBox.Show("ກະລຸນາລະບຸຄ່າ Thteshold ລະຫວ່າງ 0 - 255");
+            }
+            else
+            {
+                pict_C = Invert(pict_O, thresholdValue);
+                pictureBox1.Image = pict_C;
+            }
         }
 
 
@@ -258,6 +274,9 @@ namespace WinFormsApp4
                 return;
             }
             int.TryParse(txtc.Text, out int c);
+
+
+
             pict_C = LogTransformation(pict_O, c);
             pictureBox1.Image = pict_C;
 
@@ -296,10 +315,17 @@ namespace WinFormsApp4
             {
                 return;
             }
+
+
             int.TryParse(txtc2.Text, out int c);
             int.TryParse(txtgm.Text, out int gm);
             pict_C = PowerLaw(pict_O, c, gm);
             pictureBox1.Image = pict_C;
+        }
+
+        private void txtT_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
