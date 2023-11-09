@@ -12,7 +12,7 @@
 **ເວລາເຮົາໃຊ້ປຸ່ມ Open image ມັນຈະສະເເດງສະເພາະ ຟາຍຮູບພາບ** (*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.tiff) 
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/openimage.png)
 
-### ກໍລະນີຖ້າບໍ່ໃສ່ຮູບພາບ ແລ້ວເລືອກໃຊ້ຟັງຊັ່ນຕ່າງໆ ຈະມີແຈ້ງເຕືອນ
+### ກໍລະນີເຮົາໃສ່ຮູບພາບແລ້ວເລືອກໃຊ້ຟັງຊັ່ນຕ່າງໆ ຈະມີແຈ້ງເຕືອນ
 
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/Message.png)
 
