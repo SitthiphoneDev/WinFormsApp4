@@ -4,23 +4,24 @@
  - ຫ້ອງ: 3CS1
  -  ລະຫັດນັກສຶກສາ:   205N008/21
 
-
 ## ຮູບພາບໂປຣແກຣມ
 ![enter image description here](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/home.png)
 
 ## button **open image** 
-**ເວລາເຮົາໃຊ້ປຸ່ມ Open image ມັນຈະສະເເດງສະເພາະ ຟາຍຮູບພາບ** (*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.tiff) 
+- **ເວລາເຮົາໃຊ້ປຸ່ມ Open image ມັນຈະສະເເດງສະເພາະ ຟາຍຮູບພາບ** (*.jpg;*.jpeg;*.png;*.gif;*.bmp;*.tiff) 
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/openimage.png)
 
-### ກໍລະນີເຮົາໃສ່ຮູບພາບແລ້ວເລືອກໃຊ້ຟັງຊັ່ນຕ່າງໆ ຈະມີແຈ້ງເຕືອນ
+- **ກໍລະນີເຮົາໃສ່ຮູບພາບແລ້ວເລືອກໃຊ້ຟັງຊັ່ນຕ່າງໆ ຈະມີແຈ້ງເຕືອນ**
 
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/Message.png)
 
-## Gray Scale 1
+## ເຮັດຮູບພາບໃຫ້ເປັນ Gray Scale:
+
+### **1. Gray Scale 1**
 
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/grayscal1.png)
 
-## Gray Scale 2
+### **2. Gray Scale 2**
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/grayscal2.png)
 
 ## Black and Write 
@@ -35,7 +36,7 @@
 ## invert
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/invert.png)
 
-## Nagative 
+## Negative 
 ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/Native.png)
 
 ## Log Transformation
