@@ -14,17 +14,15 @@
 
 ## Gray Scale 1
 
-![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/grayscale1.png)
+![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/grayscal1.png)
 
 ## Gray Scale 2
-![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/grayscale2.png)
+![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/grayscal2.png)
 
 ## Black and Write
 
- - **ຖ້າບໍ່ກຳນົດຄ່າ Thteshold ໃນລະວ່າງ 0 ຫາ 255 ຈະມີແຈ້ງເຕືອນ **
- 
+ -  **ຖ້າບໍ່ກຳນົດຄ່າ Thteshold ໃນລະວ່າງ 0 ຫາ 255 ຈະມີແຈ້ງເຕືອນ.**  
  ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/message2.png)
 
- - ຜົນລັບຂອງ Black and Write
-   
+ - **ຜົນລັບຂອງ Black and Write(\)** 
  ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/Black%20And%20White.png)
