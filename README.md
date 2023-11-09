@@ -25,6 +25,6 @@
  
  ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/message2.png)
 
-
- - ຜົນລັບຂອງ Black and Write 
+ - ຜົນລັບຂອງ Black and Write
+   
  ![](https://github.com/SitthiphoneDev/Adjust-Ptcture/blob/master/Pic/Black%20And%20White.png)
