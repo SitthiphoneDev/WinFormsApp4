@@ -100,7 +100,7 @@
             label1.Name = "label1";
             label1.Size = new Size(81, 20);
             label1.TabIndex = 6;
-            label1.Text = "Thteshold: ";
+            label1.Text = "Threshold: ";
             // 
             // txtT
             // 
